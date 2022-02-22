@@ -1,0 +1,14 @@
+tasks:
+  Produce traffic data work items:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" producer.robot
+  Consume traffic data work items:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" consumer.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
